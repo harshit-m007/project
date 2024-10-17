@@ -1,0 +1,180 @@
+/* Container for the landing page */
+.landing-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 20px; /* Increase padding for better spacing */
+    gap: 40px; /* Add gap between left and right content */
+    background: linear-gradient(135deg, #e0f7fa, #bbdefb, #64b5f6);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    /* animation: fadeIn 1.2s ease-in-out; */
+  }
+  
+  /* Fade-in animation */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Left side content styling */
+  .left-content {
+    flex: 1;
+    animation: slideInLeft 1s ease-in-out;
+  }
+  
+  /* Slide-in-left animation */
+  @keyframes slideInLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  /* Main heading styling */
+  .heading {
+    font-size: 64px; /* Slightly smaller to fit better */
+    color: #1a237e; /* Deep vivid blue */
+    margin-bottom: 20px;
+    font-weight: 800; /* Extra bold font */
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+    position: relative;
+    animation: glow 2s ease-in-out infinite alternate;
+  }
+  
+  /* Glow effect for the heading */
+  @keyframes glow {
+    from {
+      text-shadow: 0 3px 15px rgba(26, 35, 126, 0.5);
+    }
+    to {
+      text-shadow: 0 3px 25px rgba(26, 35, 126, 0.8);
+    }
+  }
+  
+  /* Subtitle with better margin and color */
+  h2 {
+    font-size: 26px;
+    color: #283593;
+    margin-bottom: 25px;
+  }
+  
+  /* Paragraph styling with justified alignment */
+  p {
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 30px;
+    text-align: justify;
+    color: #4c5865;
+    max-width: 600px; /* Limit the width of the paragraph */
+  }
+  
+  /* List of buttons */
+  ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    gap: 20px; /* Space between buttons */
+  }
+  
+  /* Button styles */
+  .button {
+    display: inline-block;
+    padding: 15px 35px; /* Increased padding for better button size */
+    background: linear-gradient(45deg, #42a5f5, #478ed1);
+    color: #fff;
+    font-size: 18px;
+    text-decoration: none;
+    border-radius: 50px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Add subtle shadow for depth */
+    transition: background-color 0.4s, transform 0.2s, box-shadow 0.3s;
+  }
+  
+  .button:hover {
+    background: linear-gradient(45deg, #2196f3, #42a5f5);
+    transform: translateY(-5px); /* Lift on hover */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3); /* Deeper shadow */
+  }
+  
+  /* Right content styling */
+  .right-content {
+    flex: 1;
+    text-align: right;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    animation: slideInRight 1s ease-in-out;
+  }
+  
+  /* Slide-in-right animation */
+  @keyframes slideInRight {
+    from {
+      opacity: 0;
+      transform: translateX(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  /* Image styling for better responsiveness */
+  .right-content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Add shadow to make the image pop */
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+  }
+  
+  .right-content img:hover {
+    transform: scale(1.1); /* Slight zoom on hover */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Responsive design for smaller screens */
+  @media (max-width: 768px) {
+    .landing-container {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .left-content,
+    .right-content {
+      flex: none;
+      width: 100%;
+    }
+  
+    .right-content {
+      margin-top: 20px;
+    }
+  
+    .heading {
+      font-size: 48px;
+    }
+  
+    p {
+      max-width: 100%; /* Ensure text takes full width on mobile */
+    }
+  
+    ul {
+      flex-direction: column;
+      gap: 15px; /* Stack buttons vertically on smaller screens */
+    }
+  }
