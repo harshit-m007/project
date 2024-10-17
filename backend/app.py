@@ -8,6 +8,8 @@ import nltk  # type: ignore
 # Initialize Flask app
 app = Flask(__name__)
 CORS(app)  # Allow requests from React frontend
+CORS(app, origins=["https://ieee-xi.vercel.app"])
+
 
 # Download necessary NLTK resources
 nltk.download('punkt')
