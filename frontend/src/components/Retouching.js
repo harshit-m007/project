@@ -30,7 +30,7 @@ const UploadForm = () => {
     formData.append('question', question);
 
     try {
-      const response = await axios.post('http://localhost:9000/upload', formData, {
+      const response = await axios.post('https://project-me8e.onrender.com/upload', formData, {
         headers: { 'Content-Type': 'multipart/form-data' },
       });
       setSummary(response.data.summary);
