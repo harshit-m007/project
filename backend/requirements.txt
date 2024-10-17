@@ -2,3 +2,9 @@ flask
 flask-cors
 PyPDF2
 werkzeug
+gunicorn
+torch
+pdfplumber
+transformers
+nltk
+chromadb 
