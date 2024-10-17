@@ -8,3 +8,4 @@ pdfplumber
 transformers
 nltk
 chromadb 
+sentencepiece
